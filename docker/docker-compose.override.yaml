@@ -32,6 +32,7 @@ services:
       - opencve
 
   airflow-init:
+    command: !reset []
     networks:
       - opencve
 
