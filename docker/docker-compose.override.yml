@@ -5,8 +5,8 @@ x-airflow-common: &airflow-common
   build:
     context: ../scheduler
     dockerfile: Dockerfile
-  env_file:
-    - .env
+  # env_file:
+  #   - .env
   volumes:
     - ../scheduler/dags/:/opt/airflow/dags
     - ../scheduler/airflow.cfg:/opt/airflow/airflow.cfg:ro
