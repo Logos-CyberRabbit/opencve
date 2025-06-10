@@ -1,6 +1,6 @@
 services:
   airflow-webserver:
-    ports: []
+    ports: !reset []
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=reverse_proxy"
@@ -41,7 +41,7 @@ services:
       - opencve
 
   nginx:
-    ports: []
+    ports: !reset []
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=reverse_proxy"
